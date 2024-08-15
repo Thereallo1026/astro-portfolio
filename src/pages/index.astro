@@ -1,0 +1,49 @@
+---
+import Icon from 'astro-icon';
+import { Image } from 'astro:assets';
+import avatarImage from './public/thereallo.webp';
+---
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#8955b3" />
+    <title>Thereallo's Portfolio</title>
+    <link rel="stylesheet" href="/use.min.css">
+    <style>
+        body {
+            font-family: 'SF Pro Display', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#09090b] text-white flex items-center justify-center min-h-screen">
+    <main class="max-w-3xl p-8 flex items-start">
+        <Image 
+            src={avatarImage} 
+            alt="Thereallo"
+            class="rounded-full mr-6 w-32 h-32 object-cover"
+            width={128}
+            height={128}
+            loading="eager"
+        />
+        <div>
+            <h1 class="text-5xl font-bold mb-1">Hello, I'm Lo</h1>
+            <p class="text-xl mb-2">
+                I am developer, I think. I really don't know much.
+            </p>
+            <nav class="flex space-x-3" aria-label="Social media links">
+                <a href="https://github.com/Thereallo1026" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-gray-300" aria-label="GitHub profile">
+                    <Icon name="mdi:github" size={24} />
+                </a>
+                <a href="https://twitter.com/@Thereallo6" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-gray-300" aria-label="Twitter profile">
+                    <Icon name="mdi:twitter" size={24} />
+                </a>
+                <!-- <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300" aria-label="LinkedIn profile">
+                    <Icon name="mdi:linkedin" size={24} />
+                </a> -->
+            </nav>
+        </div>
+    </main>
+</body>
+</html>
